@@ -28,18 +28,16 @@ export default async function HomePage() {
   })
 
   return (
-    <div className="flex flex-col items-center gap-8 p-10 max-w-2xl mx-auto relative">
-      <div className="w-full max-w-2xl">
+    <div className="flex flex-col items-center gap-8 p-6 max-w-2xl mx-auto relative">
+      <div className="w-full flex justify-end">
+        <LogoutButton />
+      </div>
+      <div className="w-full">
         <h1 className="text-4xl font-bold text-center text-foreground mb-2">Hello, {user.name}!</h1>
         <p className="text-center text-muted-foreground mb-8">Create a new post</p>
       </div>
 
-      <div className="absolute top-4 right-12">
-        <LogoutButton />
-      </div>
-
       <CreatePostForm categories={categories.docs} />
-
       <PostsList posts={posts.docs} />
     </div>
   )

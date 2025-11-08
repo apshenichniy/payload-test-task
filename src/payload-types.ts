@@ -172,6 +172,7 @@ export interface Category {
   title: string;
   content?: string | null;
   owner: number | User;
+  posts?: (number | Post)[] | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -319,6 +320,7 @@ export interface CategoriesSelect<T extends boolean = true> {
   title?: T;
   content?: T;
   owner?: T;
+  posts?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -18,5 +18,11 @@ export const Categories: CollectionConfig = {
       relationTo: 'users',
       required: true,
     },
+    {
+      name: 'posts',
+      type: 'relationship',
+      relationTo: 'posts',
+      hasMany: true,
+    },
   ],
 }
